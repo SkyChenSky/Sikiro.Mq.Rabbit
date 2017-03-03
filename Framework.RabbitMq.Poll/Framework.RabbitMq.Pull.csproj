@@ -7,8 +7,8 @@
     <ProjectGuid>{8F290F55-CE17-4F91-8D37-512FD183619D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Framework.RabbitMq.Poll</RootNamespace>
-    <AssemblyName>Framework.RabbitMq.Poll</AssemblyName>
+    <RootNamespace>Framework.RabbitMq.Pull</RootNamespace>
+    <AssemblyName>Framework.RabbitMq.Pull</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

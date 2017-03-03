@@ -27,7 +27,7 @@ namespace Framework.RabbitMq.Poll
             var input = Input();
             while (input.ToLower() != "n")
             {
-                _rabbitMqProxy.Poll<MessageModel>(msg =>
+                _rabbitMqProxy.Pull<MessageModel>(msg =>
                 {
                     Console.WriteLine(msg.ToJson());
                 });

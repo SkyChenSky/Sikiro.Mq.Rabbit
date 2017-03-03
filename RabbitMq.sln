@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameWork.RabbitMq", "Frame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.RabbitMq.Model", "Framework.RabbitMq.Model\Framework.RabbitMq.Model.csproj", "{9AC80092-958F-4BCF-B8A6-8EAD49A26BA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.RabbitMq.Poll", "Framework.RabbitMq.Poll\Framework.RabbitMq.Poll.csproj", "{8F290F55-CE17-4F91-8D37-512FD183619D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.RabbitMq.Pull", "Framework.RabbitMq.Poll\Framework.RabbitMq.Pull.csproj", "{8F290F55-CE17-4F91-8D37-512FD183619D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.RabbitMq.Publish", "Framework.RabbitMq.Publish\Framework.RabbitMq.Publish.csproj", "{8F7EF96B-1B7B-4F76-8808-A90F264CAA60}"
 EndProject

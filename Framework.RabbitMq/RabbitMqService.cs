@@ -314,13 +314,13 @@ namespace FrameWork.RabbitMq
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="handler">消费处理</param>
-        public void Poll<T>(Action<T> handler) where T : class
+        public void Pull<T>(Action<T> handler) where T : class
         {
             var queueInfo = GetRabbitMqAttribute<T>();
             if (queueInfo.IsNull())
                 throw new ArgumentException("RabbitMqAttribute");
 
-            Poll(queueInfo.ExchangeName, queueInfo.QueueName, queueInfo.ExchangeName, handler);
+            Pull(queueInfo.ExchangeName, queueInfo.QueueName, queueInfo.ExchangeName, handler);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace FrameWork.RabbitMq
         /// <param name="queue"></param>
         /// <param name="routingKey"></param>
         /// <param name="handler">消费处理</param>
-        private void Poll<T>(string exchange, string queue, string routingKey, Action<T> handler) where T : class
+        private void Pull<T>(string exchange, string queue, string routingKey, Action<T> handler) where T : class
         {
             var channel = GetModel(exchange, queue, routingKey);
 
