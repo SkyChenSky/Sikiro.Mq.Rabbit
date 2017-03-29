@@ -1,7 +1,6 @@
 ﻿using System;
 using Framework.RabbitMq.Model;
-using FrameWork.RabbitMq;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 
 namespace Framework.RabbitMq.Publish
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FrameWork.RabbitMq.RabbitMqProxyConfig
+namespace Framework.RabbitMq.RabbitMqProxyConfig
 {
     /// <summary>
     /// 自定义的RabbitMq队列信息实体特性

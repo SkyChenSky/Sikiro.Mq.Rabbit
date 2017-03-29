@@ -1,8 +1,7 @@
-﻿using Framework.RabbitMq.Poll;
-using FrameWork.Extension;
+﻿using FrameWork.Extension;
 using Topshelf;
 
-namespace FrameWork.RabbitMq.Get
+namespace Framework.RabbitMq.Pull
 {
     class Program
     {

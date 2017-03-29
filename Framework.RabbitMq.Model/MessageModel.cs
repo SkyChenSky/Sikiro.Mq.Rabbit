@@ -1,5 +1,5 @@
 ﻿using System;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 
 namespace Framework.RabbitMq.Model
 {

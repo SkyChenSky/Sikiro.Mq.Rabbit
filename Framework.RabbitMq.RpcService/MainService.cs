@@ -1,9 +1,9 @@
 ﻿using System;
 using Framework.RabbitMq.Model;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 using FrameWork.Extension;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
 
-namespace FrameWork.RabbitMq.RpcService
+namespace Framework.RabbitMq.RpcService
 {
     public class MainService
     {

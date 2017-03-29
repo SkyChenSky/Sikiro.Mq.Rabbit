@@ -1,8 +1,8 @@
 ﻿using System;
 using Framework.RabbitMq.Model;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 
-namespace FrameWork.RabbitMq.RpcClient
+namespace Framework.RabbitMq.RpcClient
 {
     class Program
     {

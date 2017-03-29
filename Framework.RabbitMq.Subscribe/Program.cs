@@ -1,8 +1,7 @@
-﻿using Framework.RabbitMq.Subscribe;
-using FrameWork.Extension;
+﻿using FrameWork.Extension;
 using Topshelf;
 
-namespace FrameWork.RabbitMq.Receive
+namespace Framework.RabbitMq.Subscribe
 {
     class Program
     {

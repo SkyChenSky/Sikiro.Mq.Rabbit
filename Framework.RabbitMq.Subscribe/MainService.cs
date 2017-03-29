@@ -1,8 +1,7 @@
 ﻿using System;
 using Framework.RabbitMq.Model;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 using FrameWork.Extension;
-using FrameWork.RabbitMq;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
 
 namespace Framework.RabbitMq.Subscribe
 {

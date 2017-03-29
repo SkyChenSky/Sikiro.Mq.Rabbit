@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FrameWork.RabbitMq.RabbitMqProxyConfig
+namespace Framework.RabbitMq.RabbitMqProxyConfig
 {
     /// <summary>
     /// 

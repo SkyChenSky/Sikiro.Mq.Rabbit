@@ -2,14 +2,13 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using Framework.RabbitMq.RabbitMqProxyConfig;
 using FrameWork.Extension;
-using FrameWork.RabbitMq.RabbitMqProxyConfig;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using ExchangeType = RabbitMQ.Client.ExchangeType;
 
-namespace FrameWork.RabbitMq
+namespace Framework.RabbitMq
 {
     #region RabbitMQ.Client原生封装类
     /// <summary>
@@ -285,7 +284,7 @@ namespace FrameWork.RabbitMq
             consumer.Received += (model, ea) =>
             {
                 var body = ea.Body;
-                var msgStr = body.DeserializeUtf8();
+                var msgStr = SerializeExtension.DeserializeUtf8(body);
                 var msg = msgStr.FromJson<T>();
                 try
                 {
@@ -336,10 +335,10 @@ namespace FrameWork.RabbitMq
             var channel = GetModel(exchange, queue, routingKey);
 
             var result = channel.BasicGet(queue, false);
-            if (result.IsNull())
+            if (ObjectExtension.IsNull(result))
                 return;
 
-            var msg = result.Body.DeserializeUtf8().FromJson<T>();
+            var msg = SerializeExtension.DeserializeUtf8(result.Body).FromJson<T>();
             try
             {
                 handler(msg);
@@ -412,7 +411,7 @@ namespace FrameWork.RabbitMq
                     var ea = consumer.Queue.Dequeue();
                     if (ea.BasicProperties.CorrelationId == correlationId)
                     {
-                        return ea.Body.DeserializeUtf8();
+                        return SerializeExtension.DeserializeUtf8(ea.Body);
                     }
 
                     if (sw.ElapsedMilliseconds > 30000)
@@ -461,7 +460,7 @@ namespace FrameWork.RabbitMq
             consumer.Received += (model, ea) =>
             {
                 var body = ea.Body;
-                var msgStr = body.DeserializeUtf8();
+                var msgStr = SerializeExtension.DeserializeUtf8(body);
                 var msg = msgStr.FromJson<T>();
 
                 var props = ea.BasicProperties;

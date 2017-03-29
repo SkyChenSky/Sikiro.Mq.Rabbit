@@ -1,7 +1,7 @@
 ﻿using FrameWork.Extension;
 using Topshelf;
 
-namespace FrameWork.RabbitMq.RpcService
+namespace Framework.RabbitMq.RpcService
 {
     class Program
     {
